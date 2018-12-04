@@ -1,0 +1,111 @@
+body{
+  margin: 0 10px 0 0;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  display:grid;
+  /* insert the size of columns . 1 fr means distribute the remaining space*/
+  grid-template-columns: 14em 1fr;
+  overflow: hidden;
+  /*add spacing between columns. if not they wil be side by side  */
+  grid-column-gap: 1px;
+  grid-template-areas:
+  "navigation main"
+
+}
+
+
+
+nav{
+  text-align: center;
+  border-right: #a6a6a6 groove 3px;
+  padding: 0 35px 0 20px;
+  display:flex;
+  flex-direction: column;
+  grid-area: navigation;
+  /* Full-height: remove this if you want "auto" height */
+  height: 100%;
+  width: 200px;
+  /* Set the navbar to fixed position */
+  position: fixed;
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color:#f2f2f2;
+}
+
+
+nav a{
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 15px 0 15px 0;
+  color: #1a1a1a;
+  margin-top: 10px;
+  margin-botton: 10px;
+}
+
+
+nav header{
+
+  width: 30px;
+}
+
+
+main{
+  grid-area: main;
+}
+
+ul p{
+  padding-left: 25px;
+}
+
+pre {
+  white-space: pre-line;
+  text-align: left;
+  margin-left: 25px;
+}
+
+
+footer{
+  text-align: center;
+  height: 50px;
+  display:flex;
+  justify-content: center;
+  margin-top: 80px;
+  font-size: 20px;
+  font-weight: strong;
+  flex-direction: column;
+}
+
+footer p{
+  margin: 1px 1px 1px 1px;
+}
+
+
+@media (max-width: 900px){
+  .container{
+    display: initial;
+  }
+
+  nav{
+    border-bottom: #a6a6a6 groove 3px;
+    border-right:none;
+    position:fixed;
+    width: 100%;
+    background-color: #f2f2f2;
+    height: auto;
+  }
+
+  nav header{
+
+    width: auto;
+  }
+
+  main{
+    padding-top: 20em;
+  }
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sample Documentation Page</title>
+    <link rel="stylesheet" href="technical_documentation.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+
+
+        <nav id="navbar">
+          <header>
+            <h1>Python Data Structures <br>Sample Documentation Page</h1>
+          </header>
+          <a class="nav-link" href="#lists">Lists</a>
+          <a class="nav-link" href="#tuples_and_sequences">Tuples and Sequences</a>
+          <a class="nav-link" href="#sets">Sets</a>
+          <a class="nav-link" href="#dictionaries">Dictionaries</a>
+          <a class="nav-link" href="#looping_techniques">Looping Techniques</a>
+          <a class="nav-link" href="#reference">Reference</a>
+        </nav>
+
+
+
+      <main id="main-doc">
+
+        <section id="lists" class="main-section">
+
+          <header>
+            <h2>Lists</h2>
+          </header>
+
+          <p>
+            The list data type has some more methods.
+            Here are all of the methods of list objects:
+          </p>
+
+          <ul>
+            <li>
+              list.count(x)
+            </li>
+              <p>
+                Return the number of times x appears in the list.
+              </p>
+
+            <li>
+              list.index(x[, start[, end]])
+            </li>
+              <p>
+                Return zero-based index in the list of the first item whose value
+                is equal to x. Raises a ValueError if there is no such item.
+              </p>
+              <p>
+                The optional arguments start and end are interpreted as in
+                the slice notation and are used to limit the search to a particular
+                subsequence of the list. The returned index is computed relative to
+                the beginning of the full sequence rather than the start argument.
+              </p>
+
+            <li>
+              list.reverse()
+            </li>
+              <p>
+                Reverse the elements of the list in place.
+              </p>
+
+            <li>
+              list.append(x)
+            </li>
+              <p>
+                Add an item to the end of the list. Equivalent to
+                <code>a[len(a):] = [x]</code>.
+              </p>
+
+            <li>list.pop([i])</li>
+              <p>
+                Remove the item at the given position in the list, and return it.
+                If no index is specified, <code>a.pop()</code> removes
+                and returns the lastitem in the list.
+                (The square brackets around the i in the method signature
+                denote that the parameter is optional, not that you should
+                type square brackets at that position. You will see this notation
+                frequently in the Python Library Reference.)
+              </p>
+          </ul>
+
+          <pre>
+            <code>
+              >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+              >>> fruits.count('apple')
+              2
+              >>> fruits.count('tangerine')
+              0
+              >>> fruits.index('banana')
+              3
+              >>> fruits.index('banana', 4)  # Find next banana starting a position 4
+              6
+              >>> fruits.reverse()
+              >>> fruits
+              ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
+              >>> fruits.append('grape')
+              >>> fruits
+              ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
+              >>> fruits.pop()
+              'grape'
+            </code>
+          </pre>
+
+        </section>
+
+        <section id="tuples_and_sequences" class="main-section">
+
+          <header>
+            <h2>Tuples and Sequences</h2>
+          </header>
+
+          <p>
+            We saw that lists and strings have many common properties, such as
+            indexing and slicing operations. They are two examples of sequence
+            data types (see Sequence Types — list, tuple, range). Since Python is
+            an evolving language, other sequence data types may be added.
+            There is also another standard sequence data type: the tuple.
+          </p>
+
+         <p>
+           A tuple consists of a number of values separated by commas, for
+           instance:
+         </p>
+
+         <pre>
+           <code>
+             >>> t = 12345, 54321, 'hello!'
+             >>> t[0]
+              12345
+              >>> t
+              (12345, 54321, 'hello!')
+              >>> # Tuples may be nested:
+              ... u = t, (1, 2, 3, 4, 5)
+              >>> u
+              ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+              >>> # Tuples are immutable:
+              ... t[0] = 88888
+              Traceback (most recent call last):
+                File "<stdin>", line 1, in "<module>"
+              TypeError: 'tuple' object does not support item assignment
+              >>> # but they can contain mutable objects:
+              ... v = ([1, 2, 3], [3, 2, 1])
+              >>> v
+              ([1, 2, 3], [3, 2, 1])
+            </code>
+         </pre>
+
+        </section>
+
+
+        <section id="sets" class="main-section">
+
+          <header>
+            <h2>Sets</h2>
+          </header>
+          <p>
+            Python also includes a data type for sets. A set is an unordered
+            collection with no duplicate elements. Basic uses include membership
+            testing and eliminating duplicate entries. Set objects also support
+            mathematical operations like union, intersection, difference,
+            and symmetric difference.
+          </p>
+
+          <p>
+            Curly braces or the <code>set()</code> function can be used to create
+            sets. Note: to create an empty set you have to use <code>set()</code>,
+            not <code>{}</code>; the latter creates an empty dictionary, a data
+            structure that we discuss in the next section.
+          </p>
+
+          <p>
+            Here is a brief demonstration:
+          </p>
+
+          <pre>
+            <code>
+              >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+              >>> print(basket)                      # show that duplicates have been removed
+              {'orange', 'banana', 'pear', 'apple'}
+              >>> 'orange' in basket                 # fast membership testing
+              True
+              >>> 'crabgrass' in basket
+              False
+
+              >>> # Demonstrate set operations on unique letters from two words
+              ...
+              >>> a = set('abracadabra')
+              >>> b = set('alacazam')
+              >>> a                                  # unique letters in a
+              {'a', 'r', 'b', 'c', 'd'}
+              >>> a - b                              # letters in a but not in b
+              {'r', 'd', 'b'}
+              >>> a | b                              # letters in a or b or both
+              {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+              >>> a & b                              # letters in both a and b
+              {'a', 'c'}
+              >>> a ^ b                              # letters in a or b but not both
+              {'r', 'd', 'b', 'm', 'z', 'l'}
+            </code>
+
+          </pre>
+        </section>
+
+
+        <section id="dictionaries" class="main-section">
+
+          <header>
+            <h2>Dictionaries</h2>
+          </header>
+
+          <p>
+            Another useful data type built into Python is the dictionary
+            (see Mapping Types — dict). Dictionaries are sometimes found in other
+            languages as “associative memories” or “associative arrays”.
+            Unlike sequences, which are indexed by a range of numbers,
+            dictionaries are indexed by keys, which can be any immutable type;
+            strings and numbers can always be keys. Tuples can be used as keys
+            if they contain only strings, numbers, or tuples; if a tuple contains
+            any mutable object either directly or indirectly, it cannot be used
+            as a key. You can’t use lists as keys, since lists can be modified in
+            place using index assignments, slice assignments, or methods like
+            <code>append()</code> and <code>extend()</code>
+          </p>
+
+          <p>
+            It is best to think of a dictionary as a set of key: value pairs,
+            with the requirement that the keys are unique (within one dictionary).
+            A pair of braces creates an empty dictionary: <code>{}</code>.
+            Placing a comma-separated list of key:value pairs within the braces
+            adds initial key:value pairs to the dictionary; this is also the way
+            dictionaries are written on output.
+          </p>
+
+          <p>
+            The main operations on a dictionary are storing a value with some key
+            and extracting the value given the key. It is also possible to delete
+            a key:value pair with <code>del</code>. If you store using a key that
+            is already in use, the old value associated with that key is forgotten.
+            It is an error to extract a value using a non-existent key.
+          </p>
+
+          <p>
+            Performing <code>list(d)</code> on a dictionary returns a list of all
+            the keys used in the dictionary, in insertion order
+            (if you want it sorted, just use <code>sorted(d)</code> instead).
+            To check whether a single key is in the dictionary, use the in keyword.
+          </p>
+
+          <p>
+            Here is a small example using a dictionary:
+          </p>
+
+          <pre>
+            <code>
+              >>> tel = {'jack': 4098, 'sape': 4139}
+              >>> tel['guido'] = 4127
+              >>> tel
+              {'jack': 4098, 'sape': 4139, 'guido': 4127}
+              >>> tel['jack']
+              4098
+              >>> del tel['sape']
+              >>> tel['irv'] = 4127
+              >>> tel
+              {'jack': 4098, 'guido': 4127, 'irv': 4127}
+              >>> list(tel)
+              ['jack', 'guido', 'irv']
+              >>> sorted(tel)
+              ['guido', 'irv', 'jack']
+              >>> 'guido' in tel
+              True
+              >>> 'jack' not in tel
+              False
+            </code>
+          </pre>
+
+        </section>
+
+
+        <section id="looping_techniques" class="main-section">
+
+          <header>
+            <h2>Looping Techniques</h2>
+          </header>
+
+          <p>
+            When looping through dictionaries, the key and corresponding
+            value can be retrieved at the same time using the <code>items()</code>
+            method.
+          </p>
+
+          <pre>
+            <code>
+              >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+              >>> for k, v in knights.items():
+              ...     print(k, v)
+              ...
+              gallahad the pure
+              robin the brave
+            </code>
+          </pre>
+
+        </section>
+
+        <section id="reference" class="main-section">
+          <header>
+            <h2>Reference</h2>
+          </header>
+
+          <p>
+            All the conent in this page is taken from
+            <a href="https://docs.python.org/">www.python.org</a>.
+            This page is purely for study and demonstration purposes.
+          </p>
+        </section>
+
+        <footer>
+          <p>Lampa, Niccolo Theo J. 2018</p>
+          <p>Build a Technical Documentation Page Project for FreeCodeCamp.</p>
+        </footer>
+
+
+      </main>
+
+
+    </div>
+
+  </body>
+
+  <script src="technical_documentation.js">
+  </script>
+</html>

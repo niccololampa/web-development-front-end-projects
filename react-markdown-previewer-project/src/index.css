@@ -1,0 +1,201 @@
+html {
+  background: url(pacman-background.jpg), black;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading {
+  text-align: center;
+  color: #fffa00;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* .blinking {
+  animation: blinkingText 0.8s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: transparent;
+  }
+  30% {
+    color: #fffa00;
+  }
+  50% {
+    color: #fffa00;
+  }
+  99% {
+    color: #fffa00;
+  }
+  100% {
+    color: #fffa00;
+  }
+} */
+
+.container {
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* to distribute space in flexbox  */
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 99vw;
+  height: 85vh;
+}
+
+.input-area {
+  /* border: 0px 2px 0px 2px solid #000000; */
+  background: #000000;
+  width: 48vw;
+  height: 80vh;
+  margin: 8px 0px 0px 0px;
+  padding: 3px;
+  z-index: auto;
+}
+
+.editor {
+  background: #000000;
+  color: rgb(30, 211, 30);
+  font-size: 15px;
+  resize: None;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* For IE and modern versions of Chrome */
+  -moz-box-sizing: border-box; /* For Firefox                          */
+  -webkit-box-sizing: border-box;
+}
+
+.preview-area {
+  background: #000000;
+  width: 49vw;
+  height: 82vh;
+  margin: 8px 0px 0px 0px;
+  padding: 3px;
+  z-index: auto;
+  overflow: hidden;
+}
+
+.markdown-output {
+  overflow: auto;
+  width: auto;
+  height: 97%;
+}
+
+/* style when maximized overlap another */
+.input-area.max-true {
+  width: 99.5vw;
+  position: absolute;
+  z-index: 10;
+}
+
+.preview-area.max-true {
+  width: 99.5vw;
+  position: absolute;
+  z-index: 10;
+}
+
+/* repsonsive option */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  .input-area {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .preview-area {
+    width: 100%;
+    margin: 10px 0px 10px 2px;
+  }
+
+  .input-area.max-true {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .preview-area.max-true {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+pre {
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  color: #000000;
+}
+
+blockquote {
+  color: #f4f4f9;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em #eee solid;
+}
+
+tr {
+  border-top: 1px solid #c6cbd1;
+  background: #6f6f70;
+}
+
+th,
+td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+table tr:nth-child(2n) {
+  background: #7c7c7f;
+}
+
+i {
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:visited {
+  color: #c1d4f2;
+}
+
+/* for title window */
+
+.window-box {
+  position: relative;
+  background-color: gray;
+  height: 20px;
+  margin: auto auto 0px auto;
+}
+
+.window-button {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}

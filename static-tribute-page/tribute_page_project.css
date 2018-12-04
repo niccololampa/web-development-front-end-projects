@@ -1,0 +1,176 @@
+body{
+  margin: 0 0 0 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+.container{
+  display:grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 20% 2% 58% 20%;
+  grid-template-areas:
+  "header header"
+  "navigation navigation"
+  "picture text"
+  "footer footer";
+}
+
+@media (max-width: 600px){
+  .container{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 2% 29% 29% 20%;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "picture"
+    "text"
+    "footer";
+    padding: 10px 10px 10px 10px;
+  }
+
+  #nav-container{
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  #nav-container li{
+    flex-basis: 100%;
+  }
+}
+
+header{
+  text-align: center;
+  grid-area: header;
+  background-color:#001a33;
+  color:#ffffff;
+  height: 150px
+
+}
+
+nav{
+  grid-area: navigation;
+  background-color:#001a33 ;
+  padding: 35px;
+  overflow: hidden;
+}
+
+#nav-container{
+  display: flex;
+  list-style-type:none;
+  padding:0;
+  font-size: 22px;
+
+}
+
+#nav-container a{
+  margin-left: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+
+.search{
+  margin-left:auto;
+}
+
+.search-input{
+  height: 25px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+
+}
+
+
+
+#img-div{
+  grid-area: picture;
+  background-color: #333;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+#main{
+  width:100%;
+  height: 100%;
+  grid-area:text;
+  background-color: #333;
+  color: #DFE0E8;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+h3{
+  font-size: 20px;
+}
+.text-content{
+  width:90%;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+
+
+footer{
+  grid-area: footer;
+  text-align: center;
+  background-color: #001a33 ;
+  color: #ffffff;
+  height: 70px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+figure{
+  display: inline-block;
+  color: #DFE0E8;
+}
+
+#image{
+  margin-bottom: 10px;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#img-caption{
+  margin: 0 auto;
+  font-size: 20px;
+}
+#tribute-info{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#copyright{
+  margin: auto;
+  font-weight: bold;
+}
+
+
+
+a{
+  color:#ffffff ;
+}
+
+main a{
+  color:#ffffff ;
+  font-style: italic;
+}
+
+
+#tribute-text{
+  text-align: center;
+}
+
+.text-content li {
+  margin-bottom: 8px;
+}

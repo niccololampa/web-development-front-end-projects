@@ -1,0 +1,30 @@
+.play-stop-area {
+  margin: 0px 5px 0px 5px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.control {
+  font-size: 30px;
+}
+
+.fa {
+  font-size: 40px;
+}
+
+.start_stop {
+}
+
+.start_stop {
+  background: inherit;
+  outline: none;
+  border: none;
+  color: black;
+}
+
+.reset {
+  background: inherit;
+  outline: none;
+  border: none;
+  color: black;
+}

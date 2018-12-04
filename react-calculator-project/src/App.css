@@ -1,0 +1,20 @@
+.App {
+  margin: 10vh auto;
+  width: 400px;
+  height: 600px;
+  border: 8px solid black;
+}
+
+.author {
+  margin-top: 6px;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .App {
+    margin: 1vh auto;
+    width: 315px;
+    height: 420.5px;
+  }
+}

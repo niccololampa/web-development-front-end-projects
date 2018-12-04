@@ -1,0 +1,248 @@
+/* remove margin on  the sides of the page */
+body{
+  margin: 0 0 0 0;
+  font-family:  'Open Sans', sans-serif;
+  background-color: #000000;
+  color: #f2f2f2;
+}
+
+#navbar {
+   /*use display flex to align items horizontally  */
+  display: flex;
+  /*overflow: hidden is for anything that goes beyond the div. for example link highlight when hovered  */
+  /* overflow: hidden; */
+  /*setting navbar fixed on top.  */
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  margin-left: 0px;  /* use flex-direction to make it a column flex rather than the default row */
+  flex-direction: column;
+  text-align:center;
+  /*viewport %  see https://tutorialzine.com/2015/05/simplify-your-stylesheets-with-the-magical-css-viewport-units  */
+  height: 10.5em;
+  background-color: #000000;
+  border-bottom: 1px groove #bfbfbf;
+
+
+}
+
+#header-img{
+  width: auto;
+  height: 75px;
+  margin-left: 10px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+/* use align-self flex-end to postion to the navbar at the center */
+#navigation{
+  align-self: center;
+  /*use display flex so that when hovered upon spacing is not affected  */
+  display: flex;
+
+}
+
+/* format the navigation buttons */
+#navigation a{
+  color: #bfbfbf;
+  text-align: center;
+  padding: 14px  16px;
+  text-decoration: none;
+  font-size: 23px;
+  margin: 0 10px 0 10px;
+  font-weight: bold;
+
+
+
+}
+
+#navigation a:hover{
+  color: #ffffff;
+
+
+}
+
+#welcome-section{
+  background-color: #000000;
+  height: 70vh;
+  color: #f2f2f2;
+  /* put padding-top as nav bar is position is fixed and will cover the content. */
+  padding-top: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1{
+  font-size: 30px;
+}
+
+h2{
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+p{
+  font-size: 20px;
+}
+
+
+
+#capabilities{
+  margin-top: 10px;
+  text-align: center;
+}
+
+#capabilities h2{
+  margin-bottom: 10px;
+}
+
+
+#projects{
+  margin-top: 8em;
+  text-align: center;
+  padding: 0 100px 0 100px;
+
+}
+
+#tiles{
+  display: flex;
+  /*to distribute spacing  */
+  justify-content: space-around;
+  /* to break to the next line if space is not enough */
+  flex-wrap: wrap;
+}
+
+#tiles a{
+  margin: 20px 20px 20px 20px;
+}
+
+.project-tile{
+  height: 200px;
+  width: 400px;
+}
+
+#projects a:link {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 20px;
+}
+
+#projects a:visited {
+    color: #f2f2f2;  
+}
+
+
+
+#projects p{
+  font-weight: bold;
+}
+
+#contact{
+  margin-top: 8em;
+  text-align: center;
+}
+
+#contact-links{
+  font-size: 50px;
+}
+
+.fa {
+  padding: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 0px 10px 10px 10px;
+}
+
+.fa-linkedin {
+  background: #000000;
+  color: #007bb5;
+}
+
+.fa-envelope-o{
+  background: #000000;
+  color: #f2f2f2;
+}
+
+.fa-skype {
+  background: #000000;
+  color: #00aff0;
+}
+
+.fa-facebook-square {
+  background: #000000;
+  color: #007bb5;
+}
+
+.fa-github {
+  background: #000000;
+  color: #f2f2f2;
+  }
+
+.fa-free-code-camp {
+  background: #000000;
+  color: #009933;
+}
+
+
+footer{
+  text-align: center;
+  background-color: #000000;
+  color: #f2f2f2;
+  height: 50px;
+  display:flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: strong;
+  flex-direction: column;
+}
+
+footer p{
+  margin: 1px 1px 1px 1px;
+}
+
+
+@media (max-width: 768px){
+  /* display: initial reverts the navbar to the original settings from flex */
+  /* to center items use text-align center in parent and then margin auto in child  */
+  /* to make navigation buttons break per line use display: item-list */
+
+
+  #navbar{
+    display: initial;
+    text-align: center;
+    padding: auto;
+    /*must put in height auto to make navbar size the same even with small screen height  */
+    height: 22em;
+    background-color: #000000;
+  }
+
+  #navbar a{
+    margin: auto;
+
+  }
+
+  #welcome-section{
+    height: initial;
+    /* put padding-top as nav bar is position is fixed and will cover the content. */
+    padding-top: 22em;
+  }
+
+  #navigation{
+    flex-direction: column;
+  }
+
+  #projects{
+    margin-top: 3em;
+  }
+
+    #contact{
+      margin-top: 3em;
+    }
+
+
+}

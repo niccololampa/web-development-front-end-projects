@@ -1,0 +1,32 @@
+.combined-display {
+  width: 100%;
+  height: 16.67%;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 100%;
+  /* put items in right-most */
+  justify-items: end;
+  /* put items in the bottom */
+  align-items: end;
+  background-color: black;
+  color: rgb(18, 194, 18);
+  direction: ltr;
+}
+
+.input {
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  font-size: 15px;
+  font-family: inherit;
+  /* direction: rtl; */
+}
+
+.display {
+  vertical-align: bottom;
+  border-top: 2px solid black;
+  font-size: 30px;
+  font-family: inherit;
+  direction: ltr;
+}

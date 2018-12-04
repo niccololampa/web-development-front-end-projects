@@ -1,0 +1,184 @@
+
+header {
+   /*use display flex to align items horizontally  */
+  display: flex;
+  background-color: #333;
+  /*overflow: hidden is for anything that goes beyond the div. for example link highlight when hovered  */
+  overflow: hidden;
+  /*setting navbar fixed on top.  */
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  margin-left: 0px;
+}
+
+/* remove margin on  the sides of the page */
+body{
+  margin: 0 0 0 0;
+  font-family: 'Noto Serif', serif;
+}
+
+
+
+#header-img{
+  width: auto;
+  height: 75px;
+  margin-left: 10px;
+}
+
+
+/* use align-self flex-end to postion to the navbar at the bottom */
+#navigation{
+  align-self: flex-end;
+  /*use this to move the content to the left-most  */
+  margin: 0 0 0 auto;
+}
+
+#nav-bar{
+
+}
+
+
+/* format the navigation buttons */
+#navigation a{
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#navigation a:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+
+@media (max-width: 768px) {
+  /* display: initial reverts the navbar to the original settings from flex */
+  /* to center items use text-align center in parent and then margin auto in child  */
+  /* to make navigation buttons break per line use display: item-list */
+
+  header {
+    display: initial;
+    text-align: center;
+    padding: auto;
+  }
+
+  #logo{
+    margin: auto;
+  }
+
+  #nav-bar a{
+    margin: auto;
+    display: list-item;
+  }
+
+  /* margin-top is needed as top-content is hidden behind navbar use margin as display is initial  */
+  main {
+    margin-top: 150px;
+  }
+
+  #video{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* padding-top is needed as top-content is hidden behind navbar use padding as display is flex  */
+main{
+  padding-top: 80px;
+  text-align: center;
+}
+
+h1{
+  font-size: 45px;
+}
+
+h2{
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+.section-title{
+  font-size: 28px;
+  font-weight: bold;
+  margin: 50px 0 50px 0;
+}
+
+#surfboards{
+  display: flex;
+  /*to distribute spacing  */
+  justify-content: space-around;
+  /* to break to the next line if space is not enough */
+  flex-wrap: wrap;
+}
+
+.surfboard-item{
+  width: 300px;
+  height: auto;
+}
+
+.sub-title{
+  font-weight: bold;
+  font-size:25px;
+}
+
+.surfboard-price{
+  font-weight: bold;
+  font-size:20px;
+}
+
+.description{
+  font-size:20px;
+}
+
+#surfboards a {
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    margin: 20px auto;
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 20px 30px;
+}
+
+#surfboards a.button {
+    color: #333;
+    box-shadow: #333 0 0px 0px 2px inset;
+}
+
+#surfboards a.button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: #333 0 0px 0px 40px inset;
+}
+
+
+#material{
+  display:flex;
+  /*to distribute spacing  */
+  justify-content: space-around;
+  /* to break to the next line if space is not enough */
+  flex-wrap: wrap;
+}
+
+#broken-board{
+  max-width: 100%;
+  height: auto;
+
+}
+
+
+footer{
+  text-align: center;
+  background-color: #333 ;
+  color: #f2f2f2;
+  height: 50px;
+  display:flex;
+  justify-content: center;
+  margin-top: 50px;
+}

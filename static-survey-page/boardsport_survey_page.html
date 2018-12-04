@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Board Sports Survey Page</title>
+    <link rel="stylesheet" href="boardsport_survey_page.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Boardsports Survey Form</h1>
+    </header>
+
+    <div class="container">
+      <main>
+        <p id="description">We are conducting a survey about boardsports. Please fill up below.</p>
+
+        <form id="survey-form" action="#" method="POST">
+          <div class="details">
+            <div class="text-input">
+              <label id="name-label" for="name">Name:</label>
+              <input id="name" type="text"  name="name" placeholder="Input your name" required>
+            </div>
+
+            <div class="text-input">
+              <label id="country-label" for="country">Country:</label>
+              <input id="country" type="text" name="county" placeholder="Input your country" required>
+            </div>
+
+            <div class="text-input">
+              <label id="number-label" for="number">Age:</label>
+              <input id="number" type="number" name="age" min= "4" max="99" placeholder="Input your age" required>
+            </div>
+
+            <div class="text-input">
+              <label id="email-label" for="email">Email:</label>
+              <input id="email" type="email" name="email" placeholder="Input your email" required>
+            </div>
+        </div>
+
+        <fieldset>
+          <legend>Please select all boardsports you are engaged in:</legend>
+
+          <div class="checkboxes">
+            <input id="surfing" type="checkbox" name="boardsports" value="surfing">
+            <label id="surfing-label" for="surfing">Surfing</label>
+          </div>
+
+          <div class="checkboxes">
+            <input id="wakeboarding" type="checkbox" name="boardsports" value="wakeboarding">
+            <label id="wakeboard-label" for="wakeboarding">Wakeboarding</label>
+          </div>
+
+          <div class="checkboxes">
+            <input id="skateboarding" type="checkbox" name="boardsports" value="skateboarding">
+            <label id="skateboard-label" for="skateboarding">Skateboarding</label>
+          </div>
+
+          <div class="checkboxes">
+            <input id="snowboarding" type="checkbox" name="boardsports" value="snowboarding">
+            <label id="snowboarding-label" for="snowboarding">Snowboarding</label>
+          </div>
+
+        </fieldset>
+
+        <p>How many days a week do you enjoy boardsports?
+          <div class="dropdown">
+            <select id="dropdown" name="frequency">
+              <option value="1">One day</option>
+              <option value="2">Two days</option>
+              <option value="3">Three days</option>
+              <option value="4">Four days</option>
+              <option value="5">Five days</option>
+              <option value="6">Six days</option>
+              <option value="7">Seven days</option>
+            </select>
+          </div>
+        </p>
+
+        <fieldset>
+          <legend>
+            Will you be interested in a park where all of your chosen
+            boardsports are available?
+          </legend>
+
+          <div class="radio-buttons">
+            <input id="interested" type="radio" name="park_interest" value="1">
+            <label id="interested-label" for="interested">Yes, I am interested</label>
+          </div>
+
+          <div class="radio-buttons">
+            <input id="not_interested" type="radio" name="park_interest" value="2">
+            <label id="not_interested-label" for="not_interested">No, I am not interested</label>
+          </div>
+
+          <div class="radio-buttons">
+            <input id="maybe" type="radio" name="park_interest" value="3">
+            <label id="maybe-label" for="maybe">I am not sure</label>
+          </div>
+
+        </fieldset>
+
+        <div class="suggestions">
+          <p>Please type your suggestions if you have any:</p>
+          <textarea name="suggestions" rows="8" cols="80"> Insert your suggestions here</textarea>
+        </div>
+
+        <div class="submit-button">
+          <input id="submit" type="submit" value="Submit">
+        </div>
+
+        </form>
+
+      </main>
+
+      <footer>
+        <p> Lampa, Niccolo Theo J. 2018. Build a Survey Form Project for FreeCodeCamp.</p>
+      </footer>
+    </div>
+  </body>
+
+  <script src ="boardsport_survey_page.js">
+
+  </script>
+</html>
