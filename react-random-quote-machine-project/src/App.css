@@ -1,0 +1,150 @@
+
+.container{
+  text-align: center; 
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.headings{
+  color: #f9f9f9;
+}
+
+.author{
+  height: 50px;
+}
+
+.quote-box{
+  text-align: center;
+  border: 3px solid black;
+  /* use vm unit make box responsive */
+  width: 60vmin;  
+  height: 350px;   
+  padding: 20px 10px 10px 10px;   
+  background-color: #f9d4a9;
+  margin: 50px auto 50px auto;
+  border-radius: 12px;
+}
+
+.text{
+  height: 150px;
+}
+
+@media (max-width: 700px) {
+  .container{
+    height: 100%;        
+  }
+  .quote-box{        
+    height: 500px;  
+    width:  70vmin;  
+  }
+
+  .text{
+    height: 280px;
+    }  
+}
+
+@media (max-height : 600px){
+  .container{
+    height: 100%;
+  }
+  .quote-box{        
+    height: 500px; 
+    width:  80vmin; 
+  }
+
+  .text{
+    height: 230px;
+  } 
+}
+
+.quote-button {
+  color: #b22c2c;
+  font-size: 12px;
+  font-family: 'Press Start 2P', sans-serif;
+  text-transform: uppercase;
+  background: #0dc167;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.disclaimer { 
+  font-size: 12px;
+  align-items: flex-end;
+  color: #f9f9f9;
+
+}
+
+.quote-button:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 25px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+}
+.fa:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white; 
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+/* two slightly fader class with same behaviour are n
+ecessary as component would not fade when updated when classes are changed */
+.fader { 
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fader2 { 
+
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 3s; /* Firefox < 16 */
+      -ms-animation: fadein 3s; /* Internet Explorer */
+       -o-animation: fadein 3s; /* Opera < 12.1 */
+          animation: fadein 3s;}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+

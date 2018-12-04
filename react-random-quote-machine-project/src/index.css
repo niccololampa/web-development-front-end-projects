@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;  
+  
+  
+  
+  
+}
+
+html { 
+  
+  background-image: url(./mario2.jpg);
+  background-size: 100% 100%;
+
+ 
+}
+
+
+
+
+
