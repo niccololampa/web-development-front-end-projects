@@ -143,4 +143,5 @@ class MainDisplay extends Component {
     );
   }
 }
+
 export default MainDisplay;
